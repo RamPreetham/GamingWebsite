@@ -1,0 +1,29 @@
+
+<%- include('../partials/header.ejs')%>
+<div id = "login-content">
+  <h1 id = "h1">Sign Up</h1>
+  <form action="/nav/signup" method="POST">
+  <div class = "fields">
+  <label for="firstname"></label>
+  <input type="text" id="firstname"placeholder="FirstName" name="firstName" required> <br> <br>
+  </div>
+  <div class = "fields">
+  <label for="lastname"></label>
+  <input type="text" id="lastname"placeholder="LastName" name="lastName" required> <br> <br>
+  </div>
+  <div class = "fields">
+  <label for="email"></label>
+  <input type="email" id="signupemail"placeholder="Email" name="email" required> <br> <br>
+  </div>
+  <div class = "fields">
+  <label for="password"></label>
+  <input type="password" placeholder="Password" name="password" required> <br> <br>
+</div>
+<div class = "fields">
+  <button type="submit">SignUp!</button> <br> 
+</div>
+<p id = "by">By signing up, you agree to our terms and conditions </p> <hr>
+<p id = "already"> Already have an account?<a href="/nav/login"> <b> Login!</b></a> </p>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%> 

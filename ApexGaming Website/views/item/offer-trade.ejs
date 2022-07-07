@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs')%>
+<div id="itemtrade-page">
+  <h2>Your Trades</h2>
+  <%if(items.length){%>
+  <table id="trades-table">
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Status</th>
+    </tr>
+    <%items.forEach(item=>{%>
+    <tr>
+      <td>
+        <a href="/items/<%= item.id%>"> <span><%= item.Name%></span> </a>
+      </td>
+      <td><%= item.Category%></td>
+      <td><%= item.Status%></td>
+      <%if(item.Status==="Available"){%>
+      <td>
+        <form action="/items/<%= item.id%>/tradeitem" method="get">
+          <button type="submit" class="trade-buttons">Trade Item</button>
+        </form>
+      </td>
+      <%}%>
+    </tr>
+    <%});%>
+  </table>
+  <br />
+
+  <%}else{%>
+
+  <p>You haven't created any items yet.</p>
+  <%};%>
+</div>
+<%- include('../partials/footer.ejs')%>

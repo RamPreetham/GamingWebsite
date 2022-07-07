@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs')%>
+<div id = "newtrade-content">
+  <h2>Join Us with your product</h2>
+  <form action="/items" method = "POST">
+      <label for="Category">Category</label>
+      <input type="text" name = "Category" id = "Category" placeholder="Category" required> <br> <br>
+      <label for="Name">Title</label>
+      <input type="text" name = "Name" id ="Name" placeholder="Name" required> <br> <br>
+      <label for="Year">Year</label>
+      <input type="text" name = "Year" id = "Year" placeholder="Year" required> <br> <br>   
+      <label for="Details" id = "Details-label">Details</label>
+      <textarea type="text" name = "Details" id = "Details" placeholder="Details" required></textarea> <br> <br>   
+      <button type = "Submit">Add Item</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

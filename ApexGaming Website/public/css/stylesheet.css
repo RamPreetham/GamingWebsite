@@ -1,0 +1,965 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Neonderthaw&family=Raleway:wght@300&display=swap');
+
+:root{
+  --comforter: 'Comforter', cursive;
+  --neonder: 'Neonderthaw', cursive;
+  --raleway: 'Raleway', sans-serif;
+  --black: rgb(22, 22, 22);
+  --Red: rgb(168, 37, 37);
+  --white: rgb(241, 239, 239);
+  --trans: all 0.3s ease-in-out;
+}
+*{
+  padding: 0px;
+  margin:0px;
+  box-sizing: border-box;
+  outline: 0px;
+  text-decoration: none;
+
+}
+
+html{
+  font-size: 15px;
+}
+
+body{
+  font-size: 1.5rem;
+  font-family: var(--raleway);
+  background-color: var(--black);
+  color: #fff;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+.NavContainer{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.NavBar{
+  background-color: var(--black);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2px;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 5px solid var(--Red);
+
+}
+
+.NavBar .NavContainer{
+    justify-content: space-between;
+}
+
+.NavBar-Brand{
+    font-family: var(--neonder);
+    font-size: 45px;
+    color: var(--Red);
+
+}
+.NavBar-Brand span{
+    color: whitesmoke;
+
+}
+
+
+
+.navbar-toggler-open , .navbar-toggler-close{
+    font-size: 2rem;
+    transition: var(--trans);
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: transparent;
+
+}
+
+.navbar-toggler-open:hover,.navbar-toggler-close:hover{
+    opacity: 0.5;
+}
+
+.NavBar-Collapse{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    background-color: var(--Red);
+    height: 100%;
+    z-index: 1000;
+    transition: var(--trans);
+}
+
+.navbar-toggler-close{
+    position: absolute;
+    right: 2rem;
+    top:2rem;
+}
+
+.navbar-nav{
+    margin-top: 5rem;
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar-item{
+    margin: 2rem,0;
+    text-align: left;
+    font-family: var(--raleway);
+    float: left;
+
+}
+.navbar-item:nth-child(1){
+    margin-top: 25px;
+}
+.navbar-item:nth-child(2){
+    margin-top: 25px;
+}
+.navbar-item:nth-child(3){
+    margin-top: 25px;
+}
+.navbar-item:nth-child(4){
+  margin-top: 25px;
+}
+.navbar-item:nth-child(5){
+  margin-top: 25px;
+}
+.navbar-item:last-child{
+    margin-top: 25px;
+}
+
+.nav-links{
+    color: whitesmoke;
+    font-weight: 450;
+    letter-spacing: 2px;
+    transition: var(--trans);
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+}
+
+.nav-links:hover{
+    color: var(--Red);
+
+}
+
+.show-NavBar-Collapse{
+    right: 0;
+}
+
+.navbar-close{
+    right: 0;
+}
+
+@media(min-width:990px)
+{
+    .navbar-toggler-close,.navbar-toggler-open{
+        display: none;
+    }
+    .NavBar-Collapse{
+        width: 100%;
+        right: 0;
+        position: relative;
+        background-color: transparent;
+        padding: 0;
+
+    }
+    .navbar-nav{
+        margin-top: 0;
+        display: flex;
+        align-items: left;
+        justify-content: flex-end;
+    }
+    .navbar-close{
+        display: none;
+    }
+    .navbar-item{
+        position: relative;
+        margin: 0 2.2rem 0 0 ;
+    }
+    /* Media Header*/
+    .header-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+
+    .header-item:nth-child(1){
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+    }
+    .header-item:nth-child(2){
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+}
+
+/* Header section */
+
+#header{
+    
+    margin-top: 75px;
+    padding: auto;
+}
+
+.header-item{
+    position: relative;
+}
+
+.header-item-text{
+    position: absolute;
+    margin-top: 50px;
+    bottom: 10px;
+    left: 0;
+    width:100%;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--Red);
+    background:linear-gradient(0 deg, rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+}
+
+/* News Section*/
+.newscontainer{
+    position: relative;
+    padding: 0;
+}
+.latestnews{
+    position:relative; 
+    padding:0;
+}
+
+.text{
+    color: whitesmoke;
+    font: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.date{
+    color: whitesmoke;
+    font: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.item-img{
+    height: 350px;
+    width: 350px;
+    position: relative;
+}
+
+.item-text{
+    position: relative;
+    top: -80px;
+    left: 2px;
+}
+
+/*   Footer   */
+
+.socialmedia{
+    width: 100%;
+    background:var(--Red);
+    clear: both;
+    position: relative;
+    margin-bottom: 0;
+    bottom: 0px;
+}
+
+[name="logo-twitter"]{
+    size:25px;position: relative;right: 0;color: var(--white);
+    margin-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+[name="logo-twitter"]:hover{
+    color: var(--black);
+    transition: var(--trans);
+}
+[name="logo-instagram"]{
+    size:25px;position: relative;right: 0;color: var(--white);
+    margin-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+[name="logo-instagram"]:hover{
+    color: var(--black);
+    transition: var(--trans);
+}
+
+.About{
+    align-content: center;
+    display: inline;
+    bottom: 0px;
+    border-bottom: 0px;
+    color: var(--white);
+}
+
+.aboutfooter:hover{
+  color: var(--black);
+  transition: var(--trans);
+}
+.footer-links{
+  bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.aboutfooter{
+    align-content: center;
+    line-gap-override: 5%;
+    color: var(--white);
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    top:10px;
+}
+
+.aboutfooter:hover{
+    color: var(--black);
+    transition: var(--trans);
+}
+
+
+/* Trades Page */
+.Categories-1{
+  background-image: url('resources/2kwallpaper-1.jpg');
+}
+.Categories-2{
+  background-image: url('resources/2kwallpaper-2.jpg');
+
+}
+.Category1Title{
+  position: relative;
+   top:100px;
+    color: var(--white);
+    display: inline-block;
+    size: 25px;
+    clear: both;
+    left: 0px;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+.Category2Title{
+  position: relative;
+    color: var(--white);
+    display: inline-block;
+    size: 25px;
+    clear: both;
+    padding: 5px 5px 5px 5px;
+}
+
+.item-games{
+    padding: 0px;
+    width: 100%;
+}
+
+.gameslist{
+    display: block; 
+    align-content: right;
+    clear: both;
+}
+
+
+
+
+.games{
+  top: -100px;
+  margin-left: 5px;
+  bottom: 25px;
+  outline: none;
+  text-decoration: none;
+  width: 19.5%;
+  display: inline-block;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: var(--Red);
+}
+.gameslist:nth-child(1){
+    margin-top: 5px;
+}
+.gameslist:nth-child(2){
+    margin-top: 5px;
+}
+.gameslist:nth-child(3){
+    margin-top: 5px;
+}
+.gameslist:last-child{
+margin-top: 5px;
+}
+
+
+.games:link, a:visited, a:focus {
+    background:var(--white);
+  }
+  
+.games:hover {
+    background: var(--black);
+  }
+  
+.games:active {
+    background: var(--white);
+    color: var(--Red)
+  }
+
+.consoles{
+   top: -100px;
+   bottom: 25px;
+   margin-left: 5px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 19.5%;
+    margin-right: 0.625%;
+    text-align: center;
+    line-height: 3;
+    color:  var(--Red);
+}
+
+.consoles:link, a:visited, a:focus {
+    background:var(--white);
+  }
+  
+.consoles:hover {
+    background: var(--black);
+  }
+  
+.consoles:active {
+    background: var(--white);
+    color: var(--Red);
+  }
+
+  
+
+  /* Trade Page */
+  /* trade file styling */ 
+#trade-content{
+  padding: 250px;
+  position: relative;
+  top: 10px;
+  text-align: left;
+  
+}
+#trade-content img{
+  top: 10px;
+  height: 400px;
+  width: 400px;
+  float: left;
+}
+
+#trade-buttons{
+  position: relative;
+  top: -58px;
+  bottom: auto;
+  left: 250px;
+  margin-left: 30px;
+  display: flex;
+  width:30px;
+      height: 10px;
+      border: none;
+      color: white;
+      background-color: rgb(168, 37, 37);
+      border-radius: 2px;
+      box-shadow: inset gray;
+      transition: ease-out;
+      font-size: 1rem;
+      outline: none;
+      display: flex;
+      position: relative;
+       
+  } 
+  #function-buttons{
+      width:30px;
+      height: 10px;
+      border: none;
+      color: white;
+      background-color: rgb(168, 37, 37);
+      border-radius: 2px;
+      box-shadow: inset gray;
+      transition: ease-out;
+      font-size: 1rem;
+      outline: none;
+      display: flex;
+      position: relative;
+      left: 20px;
+      bottom: 30px;  
+  }
+  .function-buttons:hover{
+    box-shadow: inset  gray;
+    cursor: pointer;
+    color: black;
+  }
+  .function-buttons{
+      margin-right: 50px;    
+  }
+  .trade-buttons:hover{
+    box-shadow: inset  gray;
+    cursor: pointer;
+    color: black;
+  }
+.trade-buttons{
+  margin-right: 25px;
+}
+  .item-trade{
+    position: relative;
+    left: 5px;
+    top: 15px;
+      margin-top: 25px;
+      top:25px;
+      clear: both;
+      margin-left: 5px;
+  }
+  .img-trade{
+    height:500px;width: 500px;
+    position: relative;
+    margin-top: 25px;
+    padding: auto;
+  }
+  .button1 {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    top:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #4CAF50;
+  }
+
+
+  .button2 {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    top:10px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+  }
+
+  .item-ConsoleDescription{
+      color: whitesmoke;  
+      border-width: 10px;
+      border-bottom: 5px solid var(--white);    
+  }
+
+  .checked {
+    color: orange;}
+
+/*  trades file styling*/
+#trades-content{
+  background-image: url('/resources/Homepagewallpaper.jpg');
+  padding: 250px;
+  border-color: var(--white); 
+  position: relative;
+  left: 10px;
+  color: var(--Red);
+} 
+#trades-content li{
+  word-spacing: 5px;
+  list-style-type:none;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: var(--Red);
+  border-color: var(--white);
+  line-height: 2.5rem;
+}
+
+
+/* login page stlying*/
+
+#login-content{
+ padding: 200px;
+  color:var(--Red);
+  background-image: url('/resources/Homepagewallpaper.jpg');
+}
+
+#firstName{
+  border: 1px solid var(--Red);
+  width: 300px;
+  height: 30px;
+}
+#lastName{
+  border: 1px solid var(--Red);
+  width: 300px;
+  height: 30px;
+}
+#email{
+  border: 1px solid var(--Red);
+  width: 300px;
+  height: 30px;
+}
+#password{
+  position: relative;
+  left: 20px;
+}
+#dont{
+  position: relative;
+  right: 10px;
+}
+.fields input{
+  border: 1px solid var(--Red);
+  width: 300px;
+  height: 30px;
+}
+::placeholder{
+  text-align: center;
+  padding: auto;
+}
+.bottom{
+  position: relative;
+  left: 60px;
+}
+.fields button{
+  border: 2px solid var(--Red);
+  background-color: var(--Red);
+  color: white;
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  top: 10px;
+  left: 20px;
+  margin-left: 35px;
+}
+.bottom{
+  top: 15px;
+  margin-top: 10px;
+}
+#login-content hr{
+  margin-top: 10px;
+  top: 10px;
+  width: 480px;
+  color: var(--Red);
+  position: relative;
+  right: 300px;
+}
+#already{
+  position: relative;
+  left:50px;
+}
+#by{
+  font-size: 12px;
+  position: relative;
+  left: 30px;
+}
+
+    /*New Trade*/
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      input[type=text], select, textarea {
+        width: 60%;
+        padding: 15px;
+        border: 2px solid var(--white);
+        border-radius: 4px;
+        resize: vertical;
+      }
+      
+      label {
+        padding: 15px 15px 15px 15px;
+        display: inline-block;
+        font-family: var(--raleway);
+        font-style: bold;
+        color:black;
+        size: 25px;
+        font-weight: 30px;
+      }
+      
+      .button3 {
+        background-color: var(--Red);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: center;
+      }
+      
+      .button3:hover {
+        background-color: #45a049;
+      }
+      
+      .container {
+          margin-top: 50px;
+        border-radius: 5px;
+        padding: 20px;
+        border-color: var(--white);        
+      }
+      
+      .newtrade-page{
+        background-image: url('resources/Homepagewallpaper.jpg');
+      }
+
+      #newtrade-content{
+        background-image: url('/resources/Homepagewallpaper.jpg');
+        position: relative;
+        top: 50px;
+        border-radius: 5px;
+        padding: 250px;
+        border-color: var(--white); 
+      }
+      
+    #newtrade-content button{
+        position: static;
+        border-bottom: 10px;
+       left: auto;
+       top: auto;
+       border-bottom: 25px;
+       padding: 15px;
+    }
+    #newtrade-content h2{
+      top:-20px;
+      position: relative;
+      padding: 50px;
+    }
+    #newtrade-content label{
+        display: inline-block;
+        width: 300px;
+        text-align: left;
+        padding: 10px;
+    }
+    #newtrade-content input{
+        width: 500px;
+    }
+    
+      .col-lbl {
+        font-family: var(--comforter);
+        color: var(--Red);
+        font-weight: 25px;
+        padding:15px 15px 15px 15px
+      }
+      
+      .col-box {
+        font-family: var(--raleway);
+        font-weight: 25px;
+        padding: 15px 15px 15px 15px;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .col-25, .col-75, input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+    
+      .About-content, .Contact-content, .message-content, .error-content{
+        padding:200px;
+        text-align: center;
+        font-weight: bold;
+        color: var(--white);
+     }
+    
+     .about-images img{
+        height: 150px;
+        width: 150px;
+     }
+     .about-images{
+         display: inline-flex;
+         gap: 200px;
+     color: var(--white);
+     position: relative;
+     top:50px;
+     }
+
+     #signupemail{
+      border: 1px solid var(--Red);
+      width: 300px;
+      height: 30px;
+     }
+
+     #Fname{
+      border: 1px solid var(--Red);
+      width: 300px;
+      height: 30px;
+     }
+     
+     /* Contact page styling */
+    .message-content{
+        text-align: center;
+        position: relative;
+        top:80px;
+        color: var(--white);
+    
+    }
+    .Contact-content form{
+        position: relative;
+        right: 100px;
+        color: var(--Red);
+    }
+    .Contact-content label{
+        position: relative;
+       left: 60px;
+       color: var(--Red);
+    }
+    
+    #anything-label{
+        font-weight: bold;
+        position: relative;
+        left: 90px;
+        bottom: 30px;
+    }
+    #anything{
+        position: relative;
+        left: 85px;
+    }
+    .contact-input{
+        position: relative;
+        left: 100px;
+    }
+    
+    .Contact-content button{
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    #email-label{
+      position: relative;
+
+    }
+    #email-input{
+      position: relative;
+      left: 124px;
+    }
+
+
+    #profile-page{
+      background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red);
+    } 
+   
+    
+    #cart-content{
+      background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red);
+    } 
+
+    #carttrade-content{
+      background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red);
+    }
+    #cartedit-content{
+      background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red); 
+    }
+
+    #cartpage{
+      background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red);
+    }
+
+    #Profile-buttons{
+      display: flex;
+      size-adjust: 5rem;
+      width: 200px;
+      text-align: left;
+      padding: 2px;
+    }
+   
+
+    #cartedit-content{
+      float: none;
+      display: inline-block;
+    }
+
+    #cartitemslist{
+      float: none;
+    }
+
+    #eachlist:nth-child(1){
+      float: none;
+      margin: 5px;
+    }
+
+    #eachlist:nth-child(2){
+      float: inline-start;
+      margin: none;
+    }
+
+    #eachlist:nth-child(3){
+      float: none;
+      margin: 5px;
+    }
+
+    #itemtrade-page{
+      background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red);
+    }
+    #itemtrade-page table{
+      position: relative;
+      top:50px;
+    }
+    
+   #manage-offer{
+    background-image: url('/resources/Homepagewallpaper.jpg');
+      padding: 450px;
+      border-color: var(--white); 
+      position: relative;
+      left: 10px;
+      color: var(--Red);
+   }

@@ -1,0 +1,7 @@
+<%- include('../partials/header.ejs')%>
+<div id = "cartedit-content">
+  <form action="/nav/cart/<%= item.id%>?_method=put" method = "POST">
+<button type = "submit">Update</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

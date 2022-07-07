@@ -1,0 +1,100 @@
+<%- include('../partials/header.ejs')%>
+<div id = "profile-page">
+    <h2>Welcome, <%= user.firstName%> <%=user.lastName%></h2>
+<section>
+<%if(items.length){%>
+    <article>
+    <p>Items you have created:</p>
+    <table id="cartitemslist">
+    <%items.forEach(item=>{%>
+    <tr>
+       <a id="eachlist"> <a href="/items/<%= item.id%>"> <p><%= item.Name%>
+        <td>
+        <div id="Profile-buttons">
+                <a id="edit">
+                    <form action='/items/<%= item._id%>/edit' method = 'get'>
+                    <button type = 'submit' class = 'function-buttons'>Update</button>
+                    </form> 
+                </a>
+                <a id="delete">
+                        <form action='/items/<%= item._id%>?_method=delete' method = 'post'>
+                        <button type = 'submit'class = 'function-buttons'>Delete</button>
+                        </form>
+                    </a>
+                    <%if(item.Status==="Offer Pending"){%>
+                        <a id="ManageOffer">
+                        <form action="/items/<%= item.id%>/manage" method="get">
+                          <button type="submit">ManageOffer</button>
+                        </form>
+                    </a>
+                    <%}%>
+            </div>
+        </td>
+            </p>
+         </a>
+       </td>
+    </tr>
+    </table>
+    <%});%>
+<%}else{%>
+    <p>You haven't created any items yet.</p>
+<%};%>
+    </article>
+</section>
+<div>
+    <p>**************************************************************************************** </p>
+    <p>**************************************************************************************** </p>
+</div>
+<section>
+  <p><b>Items in your WatchList</b></p>
+  <%if(favs.length){%> 
+    <table id = "wishlist-table">
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    <%favs.forEach(fav=>{%>
+      <tr>
+        <td><a href="/items/<%= fav.id%>"><p><%= fav.Name%></p></a></td>
+        <td><p><%= fav.Category%></td>
+        <td><p><%= fav.Status%></td>
+          <td><form action='/items/<%= fav.id%>/unwatch?_method=delete' method = 'post'>
+        <button type = 'submit'class = 'function-buttons'>UnWatch</button>
+        </form></td>
+      </tr>
+  <%});%> 
+</table><%}else{%>
+  <p>You haven't saved any items.</p>
+  <%};%>
+</section>
+<section>
+  <article>
+  <p><b>Your Offers</b></p>
+  <%if(tradeoffers.length){%> 
+    <table id = "offers-table">
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    <%tradeoffers.forEach(tradeoffer=>{%>
+      <tr>
+        <td><a href="/items/<%= tradeoffer.id%>"><p><%= tradeoffer.Name%></p></a></td>
+        <td><p><%= tradeoffer.Category%></td>
+        <td><p><%= tradeoffer.Status%></td>
+          <td><form action='/items/<%= tradeoffer.id%>/offer?_method=delete' method = 'post'>
+        <button type = 'submit'class = 'function-buttons'>Cancel Offer</button>
+        </form></td>
+      </tr>
+  <%});%> 
+</table><%}else{%>
+  <p>No Offers!!</p>
+  <%};%>
+
+    </article>
+</section>
+</div>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')%>
+<div id="manage-page">
+  <h1>Manage View</h1>
+  <table>
+    <tr>
+      <th>Offer For You</th>
+      <th>Your Item</th>
+    </tr>
+    <tr>
+      <td> <a href="/items/<%= item.id%>"> <%= item.Name%></a> </td>
+      <td> <a href="/"> <%= item.offerName%></td> </a>
+    </tr>
+  </table>
+  <div id = "form">
+    <form action="/items/<%= item.id%>/accept" method="get">
+    <button type="submit">Accept</button>
+  </form>
+  <form action="/items/<%= item.id%>/reject" method="get">
+    <button type="submit">Reject</button>
+  </form>
+</div>
+</div>
+<%- include('../partials/footer.ejs')%>

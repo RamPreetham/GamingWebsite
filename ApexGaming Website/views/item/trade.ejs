@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs')%>
+<div id = "trade-content">
+<h2><%= item.Name%></h2>
+<img id = "trade-image" src="/resources/Consoles.jpg" alt="Item image">
+<p> <b> Category:</b> <%= item.Category%></p>
+<p> <b> Details:</b> <%= item.Details%></p>
+<p> <b> Year</b> <%= item.Year%></p>
+
+<br><br>
+<%if(user== item.CreatedBy._id){%>
+    <div id="function-buttons">
+        <form action='/items/<%= item._id%>/edit' method = 'get'>
+            <button type = 'submit' class = 'function-buttons'>Edit</button>
+            </form> 
+            <form action='/items/<%= item._id%>?_method=delete' method = 'post'>
+                <button type = 'submit'class = 'function-buttons'>Delete</button>
+                </form>
+        </div>
+        <%}%>
+    <h4>Options</h4>
+    <form method="post">
+        <button class="trade-buttons" name="Options" type="submit" formmethod="POST" formaction="/items/<%= item.id%>" >Add to Cart</button>
+        <button class="trade-buttons" name="Options" type="submit" formmethod="POST" formaction="/items/<%=item.id%>/WATCH" >Watch</button>
+        <button type="submit" class="trade-buttons" name ="Options" formmethod="POST" formaction="/items/<%= item.id%>/trade">Trade</button>
+    </form>
+    
+</div>
+<%- include('../partials/footer.ejs')%>

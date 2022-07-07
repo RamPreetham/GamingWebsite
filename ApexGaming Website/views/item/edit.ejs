@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs')%>
+<div id = "newtrade-content">
+  <form action="/items/<%= item.id%>?_method=put" method = "POST">
+      <label for="Category">Category</label>
+      <input type="text" name = "Category" id = "Category" placeholder="Category" value = "<%= item.Category%>"> <br> <br>
+      <label for="Name">Title</label>
+      <input type="text" name = "Name" id ="Name" placeholder="Name" value = "<%= item.Name%>"> <br> <br>
+      <label for="Year">Year</label>
+      <input type="text" name = "Year" id = "Year" placeholder="Year" value = "<%= item.Year%>"> <br> <br>   
+      <label for="Details" id = "Details-label">Details</label>
+      <textarea type="text" name = "Details" id = "Details" placeholder="Details" rows="10" cols="65"> <%= item.Details%></textarea><br> <br>   
+      <button type = "Submit">Update</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

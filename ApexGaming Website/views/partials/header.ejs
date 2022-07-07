@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexGamingZone</title>    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    <!--Normalize Css-->
+    <link href="/css/normalize.css" rel="stylesheet" type="text/Css">
+    <!--Font Awesome Tag-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Main Css File-->
+    <link href="/css/stylesheet.css" rel="stylesheet" type="text/Css">
+</head>
+<body>
+        <!--Navigation Bar-->
+        <nav class="NavBar">
+            <div class="NavContainer flex">
+                <a class="NavBar-Brand" href="/">Apex<span>Gamer</span></a>           
+            <div class="NavBar-Collapse">
+                <button type="button" class="navbar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="navbar-nav">
+                    <ul>
+                        <li class="navbar-item">
+                        <a href="/items"> <span id = "Trades" class="nav-links">Trades</span></a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="/items/new">  <p id = "NewTrade" class="nav-links">New Trade</p> </a>
+                        </li>
+                        <%if(!user){%>
+                        <li class="navbar-item">
+                        <a href="/nav/login"><span id = "login" class="nav-links">Login</span></a>
+                        </li>
+                        <li class="navbar-item">
+                        <a href="/nav/signup"><span id = "signup" class="nav-links">Signup</span></a>
+                        </li>
+                        <%}else{%>
+                        <li class="navbar-item">
+                        <a href='/nav/profile'><span id = "profile" class="nav-links">Profile</a>
+                        </li>
+                        <li class="navbar-item">
+                        <a href='/nav/logout'><span id = "logout" class="nav-links">Logout</a>
+                        </li> 
+                        <li class="navbar-item">
+                        <a href="/nav/cart"><span id = "cart" class="nav-links">Cart</span></a>
+                        </li>
+                        <%}%>
+                    </ul>                    
+                </ul>
+            </div>           
+            <button type="button" class="navbar-toggler-open">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+   <script src="/javascript/jsfile.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 

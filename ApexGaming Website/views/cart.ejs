@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs')%>
+<div id = "cart-content">
+  <h2>Welcome to your Cart, <%= user.firstName%> <%=user.lastName%></h2>
+  <h2>Items in Cart</h2>
+  <%if(items.length){%>
+    <%for(var i = 0; i<items.length;i++){%>
+      <ul>
+        <li>
+      <a href="/nav/cart/<%= items[i]._id%>"  <p><%= items[i].Name%> : <%= items[i].Quantity%></p> </a>
+    </li>
+    </ul>
+    <%}%>
+        <%}else{%>
+        <p>Your cart is empty!</p>
+        <%}%>
+</div>
+
+
+<%- include('./partials/footer.ejs')%>

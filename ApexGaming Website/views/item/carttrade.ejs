@@ -1,0 +1,13 @@
+<%- include('../partials/header.ejs')%>
+<div id = "carttrade-content">
+<h2><%= item.Name%></h2>
+<p>Added By : <%= item.AddedBy.firstName+ ' '+ item.AddedBy.lastName%> </p>
+<br><br>
+<div id="Trade-buttons">
+    <form action='/nav/cart/<%= item.id%>?_method=delete' method = 'post'>
+        <button type = 'submit'class = 'function-buttons'>Delete</button>
+        </form>
+</div>
+
+</div>
+<%- include('../partials/footer.ejs')%>
